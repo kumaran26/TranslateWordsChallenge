@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kumaran26/TranslateWordsChallenge/issues"
   },
-  "homepage": "https://github.com/kumaran26/TranslateWordsChallenge#readme"
+  "homepage": "https://github.com/kumaran26/TranslateWordsChallenge#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
 }
