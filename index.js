@@ -14,5 +14,16 @@ fs.createReadStream('french_dictionary.csv').pipe(csv()).on('data', function(dat
 	}
 	wordsDictionary[word[0]] = word[1];
 }).on('end',function(){
-
+    replaceWords();
 });
+
+function countOccurences(text, word) {
+    return text.split(word).length - 1;
+ }
+ 
+ function replaceWords(){
+     words.forEach(function(word){
+         console.log('word: ', word, ', count: ' , countOccurences(text, word));
+         text = text.replace(new RegExp(word, "g"), wordsDictionary[word]);
+     });
+ }
